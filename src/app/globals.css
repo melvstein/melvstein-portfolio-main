@@ -31,3 +31,9 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer components {
+    .section {
+        @apply min-h-screen pt-[80px] px-4;
+    }
+}
