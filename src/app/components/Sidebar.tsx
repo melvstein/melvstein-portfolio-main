@@ -1,4 +1,6 @@
 import Link from "next/link";
+import MelvsteinLogoWhite from "../../../public/images/logo/melvstein_logo_white.png"
+import Image from "next/image";
 
 export default function Sidebar() {
     const navlist = [
@@ -25,7 +27,12 @@ export default function Sidebar() {
     ];
 
     return (
-        <nav className="fixed top-0 bottom-0 left-0 flex flex-col items-center justify-center bg-red-500 font-semibold">
+        <nav className="fixed top-0 bottom-0 left-0 flex flex-col items-center justify-between bg-blue-900 font-semibold z-10 p-[20px]">
+            <div className="flex items-center justify-center">
+                <Link href={"/"}>
+                    <Image src={MelvsteinLogoWhite} width={80} height={80} alt="melvstein logo white" />
+                </Link>
+            </div>
             <ul className="flex flex-col items-center justify-center space-y-4">
                 {
                     navlist.map((list) => (
